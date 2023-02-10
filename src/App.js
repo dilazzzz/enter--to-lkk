@@ -4,6 +4,7 @@ import Main from "./components/Main";
 import {Switch, Route} from 'react-router-dom'
 import StartPage from "./components/StartPage";
 import React from "react";
+import Profile from "./components/Profile";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
             <Route exact path={'/'} component={StartPage}></Route>
             <Route path={'/login'} component={Login}></Route>
             <Route path={'/main'} component={Main}></Route>
+            <Route path={'/profile'} component={Profile}></Route>
         </Switch>
     </div>
   );

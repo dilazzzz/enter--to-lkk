@@ -34,9 +34,12 @@ function Login({history}) {
                 validationSchema={SignupSchema}
                 onSubmit={(values, actions) => {
                     if ( values.login === userData.login && values.password === userData.password) {
+                        console.log(111)
                         localStorage.setItem('isLogin', 'true')
                         history.push('/main')
+                        console.log(222)
                     } else {
+                        console.log(333)
                         actions.setFieldError('global', 'Неправильный логин или пароль')
                     }
                 }}

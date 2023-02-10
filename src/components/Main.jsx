@@ -10,12 +10,17 @@ const Main = ({history}) => {
         history.push('/')
     }
 
-    if (localStorage.getItem('isLogin') !== true) {
+    const enterToProfile = () => {
+        history.push('/profile')
+    }
+
+    if (localStorage.getItem('isLogin') !== 'true') {
         return <Redirect to="/login"/>
     }
 
     return (
         <div>
+            <button onClick={enterToProfile}>Profile</button>
             <button onClick={logOut}>Log out</button>
             <h1>Main content</h1>
             <img style={{width: 1300, height: 700}} src={img} alt=""/>
