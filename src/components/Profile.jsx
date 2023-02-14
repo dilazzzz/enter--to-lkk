@@ -19,7 +19,7 @@ const SignupSchema = Yup.object().shape({
 
      const [isRedact, setIsRedact] = useState(false)
      const [userName, setUserName] = useState(localStorage.getItem('userName') || '')
-     const [userSurname, setUserSurname] = useState(localStorage.getItem('userSurname') || '')
+     const [userSurname, constsetUserSurname] = useState(localStorage.getItem('userSurname') || '')
      const [userMail, setUserMail] = useState(localStorage.getItem('userMail') || '')
 
      return (
